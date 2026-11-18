@@ -2,6 +2,7 @@
 ABA-AgonistFinder: A structure-based tool for the discovery of novel ABA receptor agonists
 ABA receptors (PYR/PYL/RCAR family) only close their gate and latch once an agonist is bound, and only then do they recruit a PP2C phosphatase. So when you want to screen for agonists computationally, you have to pick a structure to dock against. I couldn't find a straight answer in the literature, so I ran the comparison. Four receptor structures, five scoring functions, 15 known agonists and 660 property-matched decoys. This repo is the code for that.
 
+
 RESULTS
 
 In general, the ternary complex gave the best results, and it's not because it separates actives better overall, it's because it puts them higher up.
@@ -40,6 +41,7 @@ METRICS
 AUC via the Mann-Whitney U equivalence. EF at 1% and 5%. BEDROC with α = 20, which puts 80% of the weight in the top 8% of the ranking.
 
 RUNNING IT
+
 #bash
 pip install -r requirements.txt
 cd scripts
@@ -71,4 +73,3 @@ scripts/
   08_analisis.py             metrics, bootstrap, permutations, figures
   09_analisis_gnina.py       same for the GNINA score variants
 notebooks/
-  cribado_colab.ipynb        Colab orchestration
